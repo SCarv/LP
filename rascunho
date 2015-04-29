@@ -1,0 +1,33 @@
+mov_legal(C1, Mov, P, C2) :-	mov_direita(C1, d, P, C2);
+				mov_esquerda(C1, e, P, C2);
+				mov_baixo(C1, b, P, C2);
+				mov_cima(C1, c, P, C2);
+				mov_ilegal.
+/*
+mov_esquerda([0, P| C1], e, P, [P, 0 | C1]. 
+
+mov_esquerda([_,0, P| C1], e, P, [_,P, 0 | C1].
+
+mov_esquerda([_, _, _ ,_, 0, P| C1], e, P, [_, _, _, _ P, 0 | C1]. */
+
+%etc
+
+mov_esquerda([_,0, P| C1], e, P, [_,P, 0 | C1]. 
+
+mov_esquerda([P1 | C1], e, P, [P2 | C2]) :- mov_esquerda(C1, e, P, [P2 | C2])
+
+mov_direita([0, P| C1], d, P, [P, 0 | C2].
+mov_direita([P1 | C1], d 
+
+mov_cima([
+
+mov_ilegal :- write('movimento ilegal!')
+
+
+_ _ _ 
+_ _ _
+_ _ _
+
+0 1 2
+0 1 2
+0 1 2
